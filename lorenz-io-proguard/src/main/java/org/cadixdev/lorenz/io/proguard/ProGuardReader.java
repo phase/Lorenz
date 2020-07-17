@@ -99,7 +99,8 @@ public class ProGuardReader extends TextMappingsReader {
                 }
                 // field
                 else {
-                    this.currentClass.getOrCreateFieldMapping(obf)
+                    final FieldSignature fieldSignature = new FieldSignature(obf, new PGTypeReader(returnTypeRaw).readFieldType());
+                    this.currentClass.getOrCreateFieldMapping(fieldSignature)
                             .setDeobfuscatedName(deobf);
                 }
             }
