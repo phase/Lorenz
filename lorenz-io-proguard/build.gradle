@@ -1,4 +1,4 @@
 dependencies {
-    compile project(':lorenz')
+    compile project(':Lorenz:lorenz')
     compile 'me.jamiemansfield:string:0.1.0'
 }
